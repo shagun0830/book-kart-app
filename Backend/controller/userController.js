@@ -1,5 +1,6 @@
 const asyncHandler = require("express-async-handler");
 const User = require("../models/userModel");
+const generateToken = require("../utils/generateToken");
 
 // Register a new user
 
@@ -22,6 +23,7 @@ const registerUser = asyncHandler(async (req, res) => {
       name: user.name,
       email: user.email,
       mobile: user.mobile,
+      token: generateToken(user.id),
     });
   } else {
     res.status(400);
@@ -43,6 +45,7 @@ const authUser = asyncHandler(async (req, res) => {
       name: userWithEmail.name,
       email: userWithEmail.email,
       mobile: userWithEmail.mobile,
+      token: generateToken(userWithEmail.id),
     });
   }
   else if ( userWithMobile && (await userWithMobile.matchPassword(password))){
@@ -51,6 +54,7 @@ const authUser = asyncHandler(async (req, res) => {
       name: userWithMobile.name,
       email: userWithMobile.email,
       mobile: userWithMobile.mobile,
+      token: generateToken(userWithMobile.id),
     });
   }
    else {
