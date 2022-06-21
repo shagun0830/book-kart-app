@@ -1,0 +1,96 @@
+#payment-section {
+  max-width: 1500px;
+  margin: 0 auto 7rem auto;
+  padding-top: 2rem;
+}
+
+.pay-head{
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.pay-head h2{
+    font-size: 1.7em;
+    margin-bottom: 1rem;
+}
+
+.pay-method-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 10rem);
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 7rem;
+}
+
+.pay-method-card {
+ text-align: center;
+ border: 2px solid transparent;
+ border-radius: 5px;
+ padding: 1.3rem 0;
+}
+
+.pay-method-card:hover{
+    border: 2px solid var(--logo-color);
+}
+
+.pay-method-card{
+    font-size: .9rem;
+}
+
+.pay-method-card i{
+    font-size: 2rem;
+    margin-bottom: .7rem;
+}
+
+.pay-infoBlock {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 7rem;
+}
+
+.circleNum{
+    border: 2px solid var(--logo-color);
+    border-radius: 50%;
+    padding: 0 .5rem;
+    margin-right: .5rem;
+}
+
+.pay-infoBlock input{
+    background-color: var(--semi-grey-color);
+    margin-top: 2rem;
+    padding: .7rem;
+}
+
+.bill-form, .credit-form{
+    display:flex;
+    flex-direction: column;
+}
+
+.splitter {
+  display: grid;
+  grid-template-columns: repeat(2, 10rem);
+}
+
+.splitter input:first-child{
+    margin-right: 1rem;
+}
+
+.continue-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.continue-container button{
+    padding: 1rem 5rem;
+    background-color: var(--logo-color);
+    font-size: 1.2rem;
+    color: var(--white-color);
+    border-radius: 100px;
+    margin: 0 2rem;
+}
+.liner{
+   width: 200px;
+   height: 2px;
+   background-color: var(--semi-grey-color);
+}

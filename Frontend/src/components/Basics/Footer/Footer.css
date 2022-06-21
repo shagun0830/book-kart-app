@@ -1,0 +1,158 @@
+/*          footer-section            */
+#footer {
+  max-width: 1500px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid  var(--semi-grey-color);
+  
+}
+.footer-logo h2 {
+  color: var(--logo-color);
+  font-family: "Bebas Neue", cursive;
+  cursor: pointer;
+  font-size: 25px;
+  letter-spacing: 1px;
+}  
+.footer,
+.footer-copyright {
+  max-width: 1260px;
+  margin: 0 auto;
+}
+.footer {
+  display: flex;
+  padding: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+  .f-4{
+    display: flex;
+    align-items: center;
+  }
+  .f-1{
+    width: 350px;
+  }
+  .f-2,
+  .f-3,
+  .f-4 {
+    width: 230px;
+  }
+  .f-1,
+  .f-2,
+  .f-3,
+  .f-4 {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    line-height: 23px;
+    align-items: flex-start;
+  }
+  .f-2 h1,
+  .f-3 h1,
+  .f-4 h1 {
+      font-size:20px;
+  }
+
+  .f-2 ul,
+  .f-3 ul,
+  .f-4 ul {
+    margin-top: 1rem;
+    font-size: 14px;
+  }
+  
+  .f-2 ul li a:hover,
+  .f-3 ul li a:hover,
+  .f-4 ul li a:hover{
+    color: var(--logo-color);
+  }
+  .footer-copyright-line {
+    display: block;
+    margin: auto;
+  }
+  .f-1,
+  .f-2,
+  .f-3,
+  .f-4,
+  .footer-copyright-line {
+    font-size: 13px;
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--dark-color);
+    line-height: 30px;
+  }
+  .footer-copyright {
+    width: 100%;
+    padding: 1.5rem;
+    border-top: 1px solid var(--semi-grey-color);
+  }
+
+  @media (max-width: 1100px) {
+    .footer {
+      max-width: 850px;
+    }
+    .footer-copyright {
+      max-width: 90%;
+    }
+  }
+  @media (max-width: 769px) {
+    .footer {
+      flex-direction: column;
+    }
+    .f-1,
+    .f-2,
+    .f-3,
+    .f-4 {
+      width: 100%;
+      margin: auto;
+    }
+    .f-2,
+    .f-3,
+    .f-4 {
+      margin-top: 2.5rem;
+    }
+    .f-2 h3,
+    .f-3 h3,
+    .f-4 h3 {
+      border-bottom: 2px solid var(--blue-color);
+      padding-bottom: 0.5rem;
+    }
+    .f-2 ul,
+    .f-3 ul,
+    .f-4 ul {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .f-2 ul li,
+    .f-3 ul li,
+    .f-4 ul li {
+      display: block;
+      margin-right: 1rem;
+    }
+    .footer-copyright-line{
+      text-align: center;
+    }
+  }
+  @media (max-width: 500px) {
+    .footer {
+      flex-direction: column;
+      align-items: center;
+    }
+    .f-1,
+    .f-2,
+    .f-3,
+    .f-4 {
+      align-items:center;
+      text-align: center;
+    }
+    .f-2,
+    .f-3,
+    .f-4 {
+      margin-top: 5rem;
+    }
+    .f-2 ul,
+    .f-3 ul,
+    .f-4 ul {
+     flex-direction: column;
+    }
+    .f-2 ul li, .f-3 ul li, .f-4 ul li{
+      margin-right: 0;
+    }
+  }

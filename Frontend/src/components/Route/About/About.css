@@ -1,0 +1,34 @@
+#about-section {
+  max-width: 1500px;
+  margin: 0 auto 7rem auto;
+  padding-top: 2rem;
+}
+
+.about-container{
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-head{
+  text-align: center;
+}
+
+.about-container p, .about-container h1, .about-container h2{
+  margin-bottom: 2rem;
+}
+
+.faq-accordion details{
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+.faq-accordion details > p{
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+@media(max-width:920px){
+  .about-container{
+    max-width: 600px;
+    margin: 0 3rem;
+  }
+}

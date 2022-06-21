@@ -1,0 +1,83 @@
+:root {
+  --logo-color: #d20e0f;
+  --hover-color: #a60c0c;
+  --dark-color: #1a1a1a;
+  --white-color: #ffffff;
+  --semi-grey-color: #e5e4e4ba;
+  --grey-color: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Nunito Sans";
+  letter-spacing: 1px;
+  scroll-behavior: smooth;
+}
+/*                utility               */
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  color: var(--dark-color);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+span {
+  color: var(--logo-color);
+}
+.fa {
+  font-size: 17px;
+}
+
+.hover-btnEffect:hover {
+  background-color: var(--hover-color);
+}
+
+.box-shadow {
+  box-shadow: 3px 3px 7px rgba(124, 124, 124, 0.243);
+}
+
+.input-control {
+  border: 1px solid var(--semi-grey-color);
+  border-radius: 3px;
+}
+
+.carousel-next:before {
+  background-image: url("https://user-images.githubusercontent.com/60150901/171475553-0b5ab413-56e3-4d5e-b7fe-dfd181028473.png");
+}
+
+.carousel-prev:before {
+  background-image: url();
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+   appearance: none;
+   margin: 0; 
+}
+/******************************************/

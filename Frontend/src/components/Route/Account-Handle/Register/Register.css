@@ -1,0 +1,13 @@
+#register-section{
+    max-width: 1500px;
+    margin: 0 auto 7rem auto;
+}
+.register-footer input[type="submit"]{
+    padding: 13px;
+  }
+  .register-form .fa-check{
+      color:var(--logo-color);
+      position: absolute;
+      left: 63%;
+      top:17.5rem;
+  }

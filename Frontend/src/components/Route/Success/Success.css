@@ -1,0 +1,42 @@
+#confirm-section {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.confirm-container{
+    max-width: 600px;
+    display:block;
+    background-color: var(--grey-color);
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.confirm-image img{
+    display: block;
+    margin:  0 auto;
+    margin-bottom: 2rem;
+}
+
+.confirm-content{
+    text-align: center;
+}
+
+.confirm-content h2, .confirm-content p{
+    margin-bottom: .9rem;
+}
+
+.download-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--semi-grey-color);
+    padding: 1.5rem 0;
+}
+
+.download-container button{
+    background-color:#007AFE;
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    margin-bottom: 2rem;
+}

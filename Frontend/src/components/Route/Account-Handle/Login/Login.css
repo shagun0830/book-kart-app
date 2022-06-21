@@ -1,0 +1,7 @@
+#login-section{
+    max-width: 1500px;
+    margin: 0 auto 7rem auto;
+}
+.login-footer input[type="submit"]{
+    padding:13px 3rem 13px;
+  }

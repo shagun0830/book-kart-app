@@ -1,0 +1,136 @@
+#nav-top-container {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+.nav-top-container {
+  background-color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 40px;
+  padding: 0 2.5rem;
+}
+.nav-top-container .general a {
+  font-family: "Bebas Neue", cursive;
+  font-size: .9rem;
+  padding: .3rem .6rem;
+}
+
+.nav-top-container .general a:hover{
+  background-color: var(--grey-color);
+}
+.divider {
+  width: 1px;
+  height: 20px;
+  background-color: #000;
+  margin: 0 1rem;
+}
+
+#navbar {
+  max-width: 1500px;
+  padding: .7rem;
+  margin: 0 auto;
+  box-shadow: 0 8px 6px -6px var(--box-shadow-color);
+  animation: over 0.9s linear;
+}
+@keyframes over {
+  from {
+    margin-left: -20rem;
+    opacity: 0;
+  }
+  to {
+    margin-left: 0;
+    opacity: 1;
+  }
+}
+.nav-items .list .list-item {
+  font-family: "Bebas Neue", cursive;
+  font-size: 25px;
+  padding: 0.9rem;
+  margin: 0 0.1rem;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.list-item:hover{
+  background-color: var(--grey-color);
+}
+.sub-list{
+  background-color: var(--grey-color);
+  width: 200px;
+  display: none;
+  padding: 7px 0;
+  position: absolute;
+  z-index: 1000;
+}
+.sub-list-item{
+  display: block;
+  font-size: 13px;
+  padding:10px 15px;
+}
+.sub-list-item:hover{background-color: rgb(224, 223, 223);}
+.hover-dropdown:hover ~ .sub-list, .sub-list:hover{
+  display: block;
+}
+.nav-logo h2 {
+  color: var(--logo-color);
+  font-family: "Bebas Neue", cursive;
+  margin-right: 5rem;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+.hamburger-icon{
+  display: none;
+}
+.hamburger-icon .fa-bars{
+  font-size:23px;
+  color:var(--logo-color);
+  cursor: pointer;
+}
+
+@media(max-width:1030px){
+  .nav-top-container{
+    padding: 0 2rem;
+  }
+}
+@media(max-width:900px){
+  #navbar{
+    padding: 0.8rem 1.5rem;
+  }
+}
+@media(max-width:700px){
+  .nav-top-container{
+    padding: 0 .5rem;
+  }
+  .divider{
+    margin:0 .5rem;
+  }
+  .logo-section{
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-logo img{
+    width: 50px;
+  }
+  .nav-logo h2{
+    font-size: 17px;
+  }
+  .hamburger-icon{
+    display:block;
+  }
+  .nav-items {
+    display: none;
+  }
+  .responsive{
+      display: block;
+  }
+  #navbar{
+    flex-direction: column;
+  }
+  .list{
+    flex-direction: column;
+  }
+  .nav-items .list .list-item{
+    font-size: 17px;
+  }
+}

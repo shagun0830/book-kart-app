@@ -1,0 +1,31 @@
+const shopCards = require('./data/shop_cards');  // Import shop cards
+const showCaseCards = require('./data/showcase_cards'); // Import showcase cards
+
+// Creating a server
+const express = require('express');
+const dotenv = require('dotenv');
+const app = express();
+const connectDB = require('./config/db'); // Import connectDB for connecting to MongoDB
+const userRoutes = require('./routes/userRoutes')
+ 
+dotenv.config(); // Configure dotenv
+connectDB();  // Connect to MongoDB
+
+app.use(express.json())
+
+
+app.get('/api/shopCards', (req,res)=>{
+    res.json(shopCards);
+})
+
+app.get('/api/showCaseCards', (req,res)=>{  
+    res.json(showCaseCards);
+}) 
+
+app.use('/api/users', userRoutes)
+
+
+
+const PORT = process.env.PORT || 8000;
+
+app.listen(PORT, console.log(`server runninng on port ${PORT}`)); 
