@@ -14,12 +14,12 @@ export function Navbar() {
     <div className="box-shadow">
       <div id="nav-top-container" className="nav-top-container">
         <div className="general">
-          <Link to="/Login">LOGIN</Link>
-          <Link to="/Register">REGISTER</Link>
-          <Link to="/Cart">
+          <Link to="/login">LOGIN</Link>
+          <Link to="/register">REGISTER</Link>
+          <Link to="/cart">
           <i class="fa-solid fa-cart-shopping"></i> Cart
           </Link>
-          <Link to="/ContactUs">Contact us: <span>+91-9735622342/43</span></Link>
+          <Link to="/contactUs">Contact us: <span>+91-9735622342/43</span></Link>
         </div>
       </div>
       <nav id="navbar" className="center">
@@ -51,13 +51,13 @@ export function Navbar() {
                   <li className="sub-list-item">Sci-Fi</li>
                 </ul>
             </Link>
-            <Link to="/Shop">
+            <Link to="/shop">
               <li className="list-item">Shop</li>
             </Link>
-            <Link to="/About">
+            <Link to="/about">
               <li className="list-item">About</li>
             </Link>
-            <Link to="/Payment">
+            <Link to="#">
               <li className="list-item">Demo</li>
             </Link>
           </ul>

@@ -16,7 +16,7 @@ export function Register() {
                <input required type="password" className='input-control' placeholder="Password"/>
                <input required type="password" className='input-control' placeholder="Confirm Password"/>
                <div className="register-footer footer-lr">
-                 <p>Have an account already? <Link to="/Login">Sign in!</Link></p>
+                 <p>Have an account already? <Link to="/login">Sign in!</Link></p>
                   <input type="submit" className='box-shadow' value="Create an account"/>
                </div>
             </form>

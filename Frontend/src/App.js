@@ -10,15 +10,15 @@ function App() {
       <Router>
         <Navbar />
         <Routes> {/* Swtich tag is replaced by Routes tag */}
-          <Route exact path="/Login" element={<Login/>}/>
-          <Route exact path="/Register" element={<Register/>}/>
-          <Route exact path="/ContactUs" element={<ContactUs/>}/>
-          <Route exact path="/About" element={<About/>}/>
+          <Route exact path="/login" element={<Login/>}/>
+          <Route exact path="/register" element={<Register/>}/>
+          <Route exact path="/contactUs" element={<ContactUs/>}/>
+          <Route exact path="/about" element={<About/>}/>
           <Route exact path="/" element={<CartProvider><Header/></CartProvider>}/>
-          <Route exact path="/Shop" element={<CartProvider><Shop/></CartProvider>}/>
-          <Route exact path="/Cart" element={<CartProvider><Cart/></CartProvider>}/>
-          <Route exact path="/Payment" element={<Payment/>}/>
-          <Route exact path="/Success" element={<Success/>}/>
+          <Route exact path="/shop" element={<CartProvider><Shop/></CartProvider>}/>
+          <Route exact path="/cart" element={<CartProvider><Cart/></CartProvider>}/>
+          <Route exact path="/payment" element={<Payment/>}/>
+          <Route exact path="/success" element={<Success/>}/>
         </Routes>
         <Footer />
       </Router>

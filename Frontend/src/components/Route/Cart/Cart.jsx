@@ -28,7 +28,7 @@ export function Cart() {
           <div className="empty-content">
             <h2>Unfortunately, Your Cart Is Empty</h2>
             <p>Please Add Something In Your Cart</p>
-            <Link to="/Shop">
+            <Link to="/shop">
               <a className="continue-shop">Continue Shopping</a>
             </Link>
           </div>
@@ -95,7 +95,7 @@ export function Cart() {
                </table>
           </div>
           <div className="checkout">
-            <Link to="/Payment">
+            <Link to="/payment">
               <a>
                  Checkout
               </a>

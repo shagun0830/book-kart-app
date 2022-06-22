@@ -15,7 +15,7 @@ export function Login() {
                       <input type="text" className='input-control' placeholder="Email/Mobile Number" required/>
                       <input type="password" className='input-control' placeholder="Password" required/>
                       <div className="login-footer footer-lr">
-                        <p>Don't have an account? <Link to="/Register">Create one.</Link></p>
+                        <p>Don't have an account? <Link to="/register">Create one.</Link></p>
                         <input type="submit" className='box-shadow' value="Login"/>
                       </div>
                      </form>

@@ -6,7 +6,7 @@ export function Payment() {
 
     const navigate = useNavigate()
     const changePath = () => {
-        navigate("/Success");
+        navigate("/success");
     }
     
   return (

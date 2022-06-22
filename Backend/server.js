@@ -3,8 +3,8 @@ const showCaseCards = require('./data/showcase_cards'); // Import showcase cards
 
 // Creating a server
 const express = require('express');
-const dotenv = require('dotenv');
 const app = express();
+const dotenv = require('dotenv');
 const connectDB = require('./config/db'); // Import connectDB for connecting to MongoDB
 const userRoutes = require('./routes/userRoutes');
 const { notFound, errorHandler } = require('./middlewares/errorMiddleware');
