@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
-// import Banner1 from "../../../images/banner1.jpeg";
-// import Banner2 from "../../../images/banner2.jpg";
-// import Banner3 from "../../../images/banner3.jpg";
+import Banner1 from "../../../images/banner1.jpeg";
+import Banner2 from "../../../images/banner2.jpg";
+import Banner3 from "../../../images/banner3.jpg";
 import lmBanner from "../../../images/lm-banner.png";
 import SubsImage from "../../../images/SubsImage.png";
 import toast, { Toaster } from "react-hot-toast";
 import "./Header.css";
 import { useCart } from "react-use-cart";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from "react-responsive-carousel";
 import axios from "axios";
 
 export function Card(props) {
@@ -66,6 +68,34 @@ export function Header() {
             <i class="fa-solid fa-magnifying-glass"></i>
           </form>
         </div>
+
+        <Carousel autoPlay="true" infiniteLoop="true"  className="carousel">
+          <div className="banner-container">
+            <div className="banner-image">
+              <img src={Banner1} alt="banner1" width="100%" />
+            </div>
+            <div className="banner-content">
+              <h4>A SALE FOR THE PAGES</h4>
+              <h1>50% Off Hundreds of Books</h1>
+              <h5>
+                <span>Online And In Stores Only</span>
+              </h5>
+              <a href="#" className="banner-imgBtn">
+                Shop Now <i class="fa-solid fa-chevron-right"></i>
+              </a>
+            </div>
+          </div>
+          <div className="banner-container">
+            <div className="banner-image">
+              <img src={Banner2} alt="banner2" width="100%" />
+            </div>
+          </div>
+          <div className="banner-container">
+            <div className="banner-image">
+              <img src={Banner3} alt="banner3" width="100%" />
+            </div>
+          </div>
+        </Carousel>
 
         <div className="book-showcase">
           <div className="showcase-head">
