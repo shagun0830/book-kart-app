@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./Login.css";
 import "../Account.css";
 import toast, { Toaster } from "react-hot-toast";
-import axios from "axiSos";
+import axios from "axios";
 
 export function Login() {
 
