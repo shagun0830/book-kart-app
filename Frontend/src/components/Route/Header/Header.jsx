@@ -178,7 +178,7 @@ export function Header() {
               Enter your email address to receive regular updates, as well as
               news on upcoming events and specific offers.
             </p>
-            <form action="#" className="subs-form">
+            <form action="mailto:book.kart@example.com" method="post" className="subs-form">
               <input
                 type="text"
                 className="subs-textField box-shadow"
