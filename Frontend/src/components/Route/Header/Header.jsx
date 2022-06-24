@@ -22,16 +22,19 @@ export function Card(props) {
           <img src={props.image} alt="card-image" />
         </div>
         <div className="card-content">
-          <p>
+          <p style={{ fontSize: ".85rem" }}>
             <b>{props.title}</b>
           </p>
           <p style={{ fontSize: ".85rem" }}>
             <em>(-{props.author})</em>
           </p>
-          <div className="rating" style={{ marginBottom: ".5rem" }}></div>
-          <h3>
+          <h4 style={{marginTop:".7rem", display:'flex', justifyContent:"space-between"}}>
             <span>Price: ${props.price}</span>
-          </h3>
+            <div style={{color:"#d20e0f", fontSize:".8rem"}}>
+              {Math.round(Math.random()* 2)+3}
+            <i class="fa-solid fa-star" style={{color:'#fdcc0d'}}></i>
+            </div>
+          </h4>
         </div>
       </div>
       <div className="card-overlayMiddle" onClick={() => addItem(props.card)}>
