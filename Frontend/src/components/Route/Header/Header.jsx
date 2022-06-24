@@ -83,7 +83,7 @@ export function Header() {
               <h5>
                 <span>Online And In Stores Only</span>
               </h5>
-              <a href="#" className="banner-imgBtn">
+              <a href="/shop" className="banner-imgBtn">
                 Shop Now <i class="fa-solid fa-chevron-right"></i>
               </a>
             </div>
