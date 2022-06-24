@@ -64,7 +64,7 @@ export function Cart() {
                     <button className="updaterBtn" onClick={()=>updateItemQuantity(item.id, item.quantity-1)}>-</button>
                   </td>
                   <td>
-                   <i class="fa-solid fa-trash-can" onClick={()=>removeItem(item.id)}></i>
+                   <i class="fa-solid fa-trash-can" onClick={()=>{window.confirm("Are you sure to remove this item?"); removeItem(item.id);}}></i>
                   </td>
                 </tr>
               ))}
@@ -83,7 +83,7 @@ export function Cart() {
                     </tr>
                   ))}
                   <tr className="borderTop">
-                    <td>Shipping Charges</td>
+                    <td><b>Shipping Charges</b></td>
                     <td>$5</td>
                   </tr>
                   <tr>

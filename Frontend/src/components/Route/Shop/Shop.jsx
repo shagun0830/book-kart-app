@@ -28,31 +28,53 @@ export function Shop() {
         <div id="side-navbar" className="side-navbar">
           <div className="side-navbar-container">
             <ul>
-              <Link to="#">
-                <li>
-                  <i class="fa fa-shopping-cart" aria-hidden="true"></i> MY CART
-                </li>
-              </Link>
-              <Link to="#">
-                <li>
-                  <i class="fa fa-truck" aria-hidden="true"></i> MY ORDER
-                </li>
-              </Link>
-              <Link to="#">
-                <li>
-                  <i class="fa fa-gift" aria-hidden="true"></i> COUPON CODE
-                </li>
-              </Link>
-              <Link to="/">
-                <li>
-                  <i class="fa fa-home" aria-hidden="true"></i> BACK TO HOME
-                </li>
-              </Link>
+              <li>
+                <h3>Filter your Search</h3>
+              </li>
+              <li>
+                <h3 style={{marginBottom:".5rem"}}>Price</h3>
+                <form>
+                  <div className="filterControl">
+                    <input type="radio" id="p-l2h" name="price" value="Price Low to High" />
+                    <label htmlFor="p-l2h">Low to High</label>
+                  </div>
+                  <div className="filterControl">
+                    <input type="radio" id="p-h2l" name="price" value="Price High to Low" />
+                    <label htmlFor="p-h2l">High to Low</label>
+                  </div>
+                </form>
+              </li>
+              <li>
+                 <h3 style={{marginBottom:".5rem"}}>Discount</h3>
+                <form>
+                  <div className="filterControl">
+                    <input type="radio" id="d-l2h" name="discount" value="discount Low to High" />
+                    <label htmlFor="d-l2h">Low to High</label>
+                  </div>
+                  <div className="filterControl">
+                    <input type="radio" id="d-h2l" name="discount" value="discount High to Low" />
+                    <label htmlFor="d-h2l">High to Low</label>
+                  </div>
+                </form>
+              </li>
+              <li>
+              <h3 style={{marginBottom:".5rem"}}>Order</h3>
+                <form>
+                  <div className="filterControl">
+                    <input type="radio" id="a2z" name="order" value="Ascending" />
+                    <label htmlFor="a2z">Ascending</label>
+                  </div>
+                  <div className="filterControl">
+                    <input type="radio" id="z2a" name="order" value="Descending" />
+                    <label htmlFor="z2a">Descending</label>
+                  </div>
+                </form>
+              </li>
             </ul>
           </div>
         </div>
         <div id="shop-container" className="shop-container">
-          <div className="showcase">
+          <div className="shop-list">
             {shopCard.map((card) => {
               return (
                 <Card
