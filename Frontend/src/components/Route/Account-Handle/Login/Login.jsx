@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import "../Account.css";
-import toast, { Toaster } from "react-hot-toast";
+import PopMsg from "../../About/PopMsg/PopMsg";
 import axios from "axios";
 
 export function Login() {
@@ -11,10 +11,6 @@ export function Login() {
   const [password, setPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
-
-  const notify = () => {
-    error && toast.error("Invalid email or password", { duration: 1500 })
-  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -45,14 +41,7 @@ export function Login() {
   return (
     <section id="login-section">
       <div className="login-container container-lr center">
-        {error && <Toaster toastOptions={{
-            style: {
-              border: "0",
-              padding: "16px",
-              color: "#fff",
-              backgroundColor: "#d20e0f",
-            },
-          }}/>}
+        {error && <PopMsg />}
         <div className="login-head head-lr">
           <h1>
             Your <span>Account</span>
@@ -80,7 +69,7 @@ export function Login() {
               <p>
                 Don't have an account? <Link to="/register">Create one.</Link>
               </p>
-              <input type="submit" className="box-shadow" value="Login" onClick={notify} />
+              <input type="submit" className="box-shadow" value="Login" />
             </div>
           </form>
         </div>

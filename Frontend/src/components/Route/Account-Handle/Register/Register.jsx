@@ -71,7 +71,7 @@ export function Register() {
             />
             <input
               required
-              type="number"
+              type="text"
               className="input-control"
               placeholder="Mobile Number"
               value={mobile}
