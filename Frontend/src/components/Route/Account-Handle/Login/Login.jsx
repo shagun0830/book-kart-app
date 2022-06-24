@@ -41,7 +41,7 @@ export function Login() {
   return (
     <section id="login-section">
       <div className="login-container container-lr center">
-        {error && <PopMsg />}
+        {/* {error && <PopMsg />} */}
         <div className="login-head head-lr">
           <h1>
             Your <span>Account</span>
