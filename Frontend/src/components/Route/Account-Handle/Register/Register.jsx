@@ -3,6 +3,7 @@ import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import "../Account.css";
+import toast, { Toaster } from "react-hot-toast";
 export function Register() {
     const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -39,13 +40,14 @@ export function Register() {
         );
 
         if(data){
-          navigate("/login")
+          toast.success("You Registered Successfully", {duration:2000});
+          navigate("/login");
         }
 
         localStorage.setItem("userinfo", JSON.stringify(data));
       } catch (error) {
         setError(error.response.data.message);
-        window.alert(error.response.data.message);
+        toast.error(error.response.data.message,{duration:1500} );
       }
     }
   };
@@ -53,6 +55,14 @@ export function Register() {
   return (
     <section id="register-section">
       <div className="register-container container-lr center">
+        <Toaster  toastOptions={{
+            style: {
+              border: "0",
+              padding: "16px",
+              color: "#fff",
+              backgroundColor: "#d20e0f",
+            },
+          }}/>
         <div className="register-head head-lr">
           <h1>
             Create Your <span>Account</span>

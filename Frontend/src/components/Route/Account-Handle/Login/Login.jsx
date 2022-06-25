@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
 import "./Login.css";
 import "../Account.css";
 import axios from "axios";
@@ -32,6 +33,7 @@ export function Login() {
         );
   
         if(data) {
+          toast.success("Login Successfully", {duration:1700});
           navigate("/");
         }
         
@@ -45,6 +47,14 @@ export function Login() {
   return (
     <section id="login-section">
       <div className="login-container container-lr center">
+        <Toaster toastOptions={{
+            style: {
+              border: "0",
+              padding: "16px",
+              color: "#fff",
+              backgroundColor: "#d20e0f",
+            },
+          }}/>
         <div className="login-head head-lr">
           <h1>
             Your <span>Account</span>
