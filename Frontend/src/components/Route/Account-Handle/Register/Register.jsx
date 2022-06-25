@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Register.css";
 import "../Account.css";
 export function Register() {
@@ -11,6 +11,8 @@ export function Register() {
   const [ConfirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -36,9 +38,14 @@ export function Register() {
           config
         );
 
+        if(data){
+          navigate("/login")
+        }
+
         localStorage.setItem("userinfo", JSON.stringify(data));
       } catch (error) {
         setError(error.response.data.message);
+        window.alert(error.response.data.message);
       }
     }
   };
