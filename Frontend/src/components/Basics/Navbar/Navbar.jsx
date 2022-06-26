@@ -16,7 +16,7 @@ export function Navbar() {
         <div className="general">
           <Link to="/login">LOGIN</Link>
           <Link to="/register">REGISTER</Link>
-          <Link to="/register">LOGOUT</Link>
+          <Link to="/logout">LOGOUT</Link>
           <Link to="/cart">
           <i class="fa-solid fa-cart-shopping"></i> Cart
           </Link>
