@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import toast from "react-hot-toast";
 import { Link, useNavigate } from "react-router-dom";
 import Logo from "../../../images/Logo.png";
 import "./Navbar.css";
@@ -18,6 +19,7 @@ export function Navbar({ isLoggedIn, setIsLoggedIn }) {
               onClick={() => {
                 setIsLoggedIn(false);
                 navigate("/");
+                toast.success("Logged out");
               }}
             >
               LOGOUT
