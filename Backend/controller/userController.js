@@ -58,4 +58,10 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-module.exports = { registerUser, authUser }; // exporting the functions
+// const aboutPage = async (req, res, authenticate) => {
+//   // router.get("/about", authenticate, (req, res) => {
+//   //   console.log("working fine");
+//    res.send(req.rootUser);
+// }
+
+module.exports = { registerUser, authUser } // exporting the functions

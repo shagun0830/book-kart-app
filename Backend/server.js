@@ -8,6 +8,7 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db"); // Import connectDB for connecting to MongoDB
 const userRoutes = require("./routes/userRoutes");
 const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
+const router = require("./routes/userRoutes");
 
 dotenv.config(); // Configure dotenv
 connectDB(); // Connect to MongoDB
@@ -26,8 +27,9 @@ app.get("/api/showCaseCards", (req, res) => {
 
 app.use("/api/users", userRoutes); // Use user routes
 
-app.use(notFound); // Use notFound middleware
-app.use(errorHandler); // Use errorHandler middleware
+
+// app.use(notFound); // Use notFound middleware
+// app.use(errorHandler); // Use errorHandler middleware)
 
 const PORT = process.env.PORT || 8000; // Configure port
 
