@@ -58,7 +58,7 @@ export function Navbar() {
               <li className="list-item">About</li>
             </Link>
             <Link to="#">
-              <li className="list-item">Demo</li>
+              <li className="list-item">Find More</li>
             </Link>
           </ul>
         </div>

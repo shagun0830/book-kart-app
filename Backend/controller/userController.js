@@ -19,7 +19,7 @@ const registerUser = asyncHandler(async (req, res) => {
 
   if (user) {
     res.json({
-      message: "User created successfully", // sending a message
+      message: "User created successfully", // sending a message in console
     });
   } else {
     res.status(400); // if not created then sending a status code
