@@ -7,8 +7,7 @@ const app = express();
 const dotenv = require("dotenv");
 const connectDB = require("./config/db"); // Import connectDB for connecting to MongoDB
 const userRoutes = require("./routes/userRoutes");
-const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
-const router = require("./routes/userRoutes");
+// const { notFound, errorHandler } = require("./middlewares/errorMiddleware");
 
 dotenv.config(); // Configure dotenv
 connectDB(); // Connect to MongoDB

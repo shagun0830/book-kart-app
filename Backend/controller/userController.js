@@ -58,10 +58,9 @@ const authUser = asyncHandler(async (req, res) => {
   }
 });
 
-// const aboutPage = async (req, res, authenticate) => {
-//   // router.get("/about", authenticate, (req, res) => {
-//   //   console.log("working fine");
-//    res.send(req.rootUser);
-// }
+const logoutUser = async (req, res) => {
+  res.clearCookie("loginToken", {path: "/"});
+  res.status(200).send("user logout");  
+}
 
-module.exports = { registerUser, authUser } // exporting the functions
+module.exports = { registerUser, authUser, logoutUser } // exporting the functions
