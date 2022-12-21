@@ -48,10 +48,13 @@ export function Card(props) {
 
 export function Header() {
   const [showCard, setShowCard] = useState([]);
+       // current   upadted     
 
   const fetchShowCards = async () => {
     const { data } = await axios.get("/api/showCaseCards");
+
     setShowCard(data);
+    // showCard = data;
   };
 
   useEffect(() => {
